@@ -15,6 +15,9 @@ Devise.setup do |config|
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
 
+  #Configure OmniAuth for Twitter
+  config.omniauth :twitter, Rails.application.secrets.twitter_access_token, Rails.application.secrets.twitter_access_secret
+
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
