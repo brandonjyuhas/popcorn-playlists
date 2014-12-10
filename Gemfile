@@ -14,6 +14,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer',  platforms: :ruby
 
+# Use RSpec for testing
+gem 'rspec-rails', "~> 2.14.0"
 # Use angularjs-rails for angular
 gem 'angularjs-rails'
 # Use Devise for user management
