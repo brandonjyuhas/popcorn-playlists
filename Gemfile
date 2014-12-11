@@ -5,14 +5,24 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 # Use postgresql as the database for Active Record
 gem 'pg'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.3'
-# Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-gem 'therubyracer',  platforms: :ruby
+
+# Gems used only for assets
+group :assets do
+	# Use SCSS for stylesheets
+	gem 'sass-rails', '~> 4.0.3'
+	# Use Uglifier as compressor for JavaScript assets
+	gem 'uglifier', '>= 1.3.0'
+	# Use CoffeeScript for .js.coffee assets and views
+	gem 'coffee-rails', '~> 4.0.0'
+	# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+	gem 'therubyracer',  platforms: :ruby
+	# Use less-rails for bootstrap options
+	gem 'less-rails'
+	# Use twitter-bootstrap-rails for front end framework
+	gem "twitter-bootstrap-rails"
+end
+
+
 
 # Use RSpec for testing
 gem 'rspec-rails', "~> 2.14.0"
@@ -25,10 +35,7 @@ gem 'omniauth'
 # Use OmnitAut-Twitter for twitter strategy
 gem 'omniauth-twitter'
 
-# Use less-rails for bootstrap options
-gem 'less-rails'
-# Use twitter-bootstrap-rails for front end framework
-gem "twitter-bootstrap-rails"
+
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
