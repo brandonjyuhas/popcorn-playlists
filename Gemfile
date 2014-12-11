@@ -12,10 +12,15 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+gem 'therubyracer',  platforms: :ruby
 
 # Use angularjs-rails for angular
 gem 'angularjs-rails'
+
+# Use less-rails for bootstrap options
+gem 'less-rails'
+# Use twitter-bootstrap-rails for front end framework
+gem "twitter-bootstrap-rails"
 
 
 # Use jquery as the JavaScript library
