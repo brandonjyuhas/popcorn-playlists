@@ -16,14 +16,12 @@ group :assets do
 	gem 'coffee-rails', '~> 4.0.0'
 	# See https://github.com/sstephenson/execjs#readme for more supported runtimes
 	gem 'therubyracer',  platforms: :ruby
-	# Use less-rails for bootstrap options
-	gem 'less-rails'
-	# Use twitter-bootstrap-rails for front end framework
-	gem "twitter-bootstrap-rails"
 end
 
-
-
+# Use less-rails for bootstrap options
+gem 'less-rails'
+# Use twitter-bootstrap-rails for front end framework
+gem "twitter-bootstrap-rails"
 # Use RSpec for testing
 gem 'rspec-rails', "~> 2.14.0"
 # Use angularjs-rails for angular
@@ -34,9 +32,6 @@ gem 'devise'
 gem 'omniauth'
 # Use OmnitAut-Twitter for twitter strategy
 gem 'omniauth-twitter'
-
-
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
