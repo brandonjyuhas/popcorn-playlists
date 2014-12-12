@@ -7,9 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
-
-<%= yield %>
-
+<%= render "shared/header" %>
+<div class="container">
+	<%= yield %>
+</div>
 </body>
 </html>
