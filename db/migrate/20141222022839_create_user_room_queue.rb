@@ -1,7 +1,7 @@
 class CreateUserRoomQueue < ActiveRecord::Migration
   def change
-    create_table :user_room_queues do |t|
-      t.references :userroom, index: true
+    create_table :rooms_users_queues do |t|
+      t.references :rooms_uses, index: true
     end
   end
 end
