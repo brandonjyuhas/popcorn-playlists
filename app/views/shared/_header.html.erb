@@ -10,7 +10,12 @@
 			<a class="navbar-brand" href="#">Popcorn-Playlist</a>
 		</div>
 		<div class="nav navbar-nav navbar-left">
-			<li><a href="test">Test</a></li>
+			<!-- Need to have this pushed to the dropdown on collapse -->
+			<% if user_signed_in? %>
+				<% current_user.rooms.reverse.take(3).each do |x| %>
+					<li><%= link_to x.name, room_path(x) %></li>
+				<% end %>
+			<% end %>
 		</div>
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -19,7 +24,7 @@
 	      <ul class="nav navbar-nav navbar-right">
 	          	<% if user_signed_in? %>
 	            	<li><%= link_to "New Room", new_room_path %></li>
-	            	<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+	            	<li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
 	            <% else %>
 	            	<li><%= link_to "Sign in with Twitter", user_omniauth_authorize_path(:twitter) %>
 	            	</li>
