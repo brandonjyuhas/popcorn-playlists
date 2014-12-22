@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
 
   def index
-    @room = Room.all
+    @rooms = Room.all
   end
 
   def show
@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
     if @room.save
       @roomUser = RoomsUser.new(room_id: @room.id, user_id: current_user.id)
       @roomUser.save
-      redirect_to("/")
+      redirect_to room_path(@room)
     else
       render :json => { :errors => @room.errors.full_messages }
     end
