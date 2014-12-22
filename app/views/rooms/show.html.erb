@@ -4,5 +4,5 @@
 <% end %>
 
 <% unless @room.users.include? current_user %>
-  <%= link_to "Join", new_rooms_user_path %>
+  <%= link_to "Join", new_room_rooms_user_path(@room) %>
 <% end %>
